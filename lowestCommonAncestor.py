@@ -46,3 +46,14 @@ def findNode(root, val):
         return findNode(root.left, val)
     else:
         return findNode(root.right, val)
+
+if __name__ == "__main__":
+    sol = Solution()
+
+    # Example tree: [6,2,8,0,4,7,9,None,None,3,5]
+    root = buildTree([6, 2, 8, 0, 4, 7, 9, None, None, 3, 5])
+
+    p = findNode(root, 2)
+    q = findNode(root, 4)
+    ans = sol.lowestCommonAncestor(root, p, q)
+    print("LCA of 2 and 4:", ans.val if ans else None)
