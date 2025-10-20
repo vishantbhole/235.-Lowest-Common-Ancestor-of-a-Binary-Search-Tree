@@ -34,3 +34,15 @@ def buildTree(values):
                 node.right = kids.pop()
 
     return root
+
+
+# Helper function to find a node with a given value
+def findNode(root, val):
+    if not root:
+        return None
+    if root.val == val:
+        return root
+    elif val < root.val:
+        return findNode(root.left, val)
+    else:
+        return findNode(root.right, val)
