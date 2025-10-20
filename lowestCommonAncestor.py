@@ -57,3 +57,11 @@ if __name__ == "__main__":
     q = findNode(root, 4)
     ans = sol.lowestCommonAncestor(root, p, q)
     print("LCA of 2 and 4:", ans.val if ans else None)
+    
+    root2 = buildTree([2, 1])
+    
+    p2 = findNode(root2, 2)
+    q2 = findNode(root2, 1)
+    ans2 = sol.lowestCommonAncestor(root2, p2, q2)
+    print("LCA of 2 and 1:", ans2.val if ans2 else None)
+
